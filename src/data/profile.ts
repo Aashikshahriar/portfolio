@@ -16,7 +16,7 @@ export const profile = {
   name: "Khondakar Ashik Shahriar",
   title: "Machine Learning Engineer | Research Assistant",
   shortBio:
-    "I work on machine learning for biomedical signal processing, medical imaging, and wireless communications — from EEG-fMRI artifact removal to lightweight, privacy-preserving models for wearables and edge devices.",
+    "I work on machine learning for biomedical signal processing, medical imaging, and wireless communications — Where mathematics meets real-world applications.",
   location: "Dhaka, Bangladesh",
   email: "kh.ashikshahriar@gmail.com",
   phone: "+88 01551225822",
@@ -74,14 +74,7 @@ export const profile = {
       period: "August 2024 – Present",
       detail: "PI: Dr. Enamul Hoque Bhuiyan",
       url: "https://chicago.medicine.uic.edu/profiles/bhuiyan-enamul/",
-    },
-    {
-      org: "Bangladesh University of Engineering and Technology (BUET)",
-      role: "Undergraduate Researcher, Dept. of EEE",
-      period: "Jan 2022 – Present",
-      detail: "Thesis Supervisor: Dr. Maruf Ahmed",
-      url: "https://eee.buet.ac.bd/people/faculty/dmara",
-    },
+    }
   ],
 
   researchInterests: [
@@ -152,21 +145,21 @@ export const profile = {
       role: "Professor, Dept. of EEE, BUET",
       relation: "Research Collaborator",
       email: "hafizimtiaz@eee.buet.ac.bd",
-      url: null,
+      url: "https://eee.buet.ac.bd/people/faculty/dhi",
     },
     {
       name: "Dr. Maruf Ahmed",
       role: "Professor, Dept. of EEE, BUET",
       relation: "Thesis Supervisor",
       email: "maruf_ahmed@eee.buet.ac.bd",
-      url: null,
+      url: "https://eee.buet.ac.bd/people/faculty/dmara",
     },
     {
       name: "Dr. Ziaur Rahman Khan",
       role: "Professor, Dept. of EEE, BUET",
       relation: "Undergraduate Advisor",
       email: "zrkhan@eee.buet.ac.bd",
-      url: null,
+      url: "https://eee.buet.ac.bd/people/faculty/dmzrk",
     },
   ],
 

@@ -1,6 +1,6 @@
 export type Publication = {
   id: string;
-  type: "journal" | "conference";
+  type: "journal" | "conference"| "pre-print";
   title: string;
   authors: string;
   venue: string;
@@ -115,10 +115,47 @@ export const publications: Publication[] = [
     year: 2025,
     link: "https://ieeexplore.ieee.org/abstract/document/11504409/",
   },
+  {
+    id: "drone-bird-tracking",
+    type: "conference",
+    title: "Real-Time Multi-Modal Drone and Bird Tracking Using Modality-Aware Adaptation and Physics-Aware Filtering",
+    authors: "Fabliha Labiba, Mohammad Asif Hasan, Sudipto Sarkar, Khondakar Ashik Shahriar, Nahian Tasnim, Shaikh Anwarul Fattah*",
+    venue: "IEEE WIECON-ECE 2025",
+    year: 2025,
+    link: "https://ieeexplore.ieee.org/abstract/document/11526317",
+  },
+  {
+    id: "audio-deepfake",
+    type: "pre-print",
+    title: "Lightweight Resolution-Aware Audio Deepfake Detection via Cross-Scale Attention and Consistency Learning",
+    authors: "Khondakar Ashik Shahriar*",
+    venue: "arXiv",
+    year: 2026,
+    link: "https://arxiv.org/abs/2601.06560",
+  },
+  {
+    id: "pediatric-teledermatology",
+    type: "pre-print",
+    title: "A Multimodal Attention-Based Multi-Instance Learning Framework for Fair and Interpretable Pediatric Teledermatology",
+    authors: "Khondakar Ashik Shahriar*",
+    venue: "Research Square",
+    year: 2026,
+    link: "https://assets-eu.researchsquare.com/files/rs-8880185/v1_covered_763062b7-fbc4-4f9f-9cf0-cfb80c54c6a5.pdf",
+  },
+  {
+    id: "raman-spectroscopy",
+    type: "pre-print",
+    title: "Raman Spectroscopy-Based COVID-19 Screening: A Physics-Informed Deep Spectral Framework",
+    authors: "Khondakar Ashik Shahriar, Maruf Ahmed, Md. Forhad Hossain, Sakib Abrar Hossain, Muhammed Enamul Hoque Chowdhury, Enamul Hoque Bhuiyan*",
+    venue: "SSRN",
+    year: 2026,
+    link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5854019",
+  },
 ];
 
 export const journalArticles = publications.filter((p) => p.type === "journal");
 export const conferencePapers = publications.filter((p) => p.type === "conference");
+export const preprints = publications.filter((p) => p.type === "pre-print");
 export const highlightedPublications = publications.filter((p) => p.highlight);
 
 export { AUTHOR };

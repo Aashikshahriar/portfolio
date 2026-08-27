@@ -68,7 +68,8 @@ export default function CvPage() {
       <Section title="Publications">
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           {publications.length} publications ({publications.filter((p) => p.type === "journal").length} journal
-          articles, {publications.filter((p) => p.type === "conference").length} conference proceedings). See the{" "}
+          articles, {publications.filter((p) => p.type === "conference").length} conference proceedings,{" "}
+          {publications.filter((p) => p.type === "pre-print").length} preprints). See the{" "}
           <Link href="/publications" className="text-accent-600 underline dark:text-accent-400">
             full publications page
           </Link>{" "}
