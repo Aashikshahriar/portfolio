@@ -10,6 +10,9 @@ export const metadata: Metadata = { title: "Misc — Khondakar Ashik Shahriar" }
 const gallery = [
   { src: profile.photos.alaska, caption: "Alaska — trekking near the glaciers." },
   { src: profile.photos.bungee, caption: "Bungee jumping — chasing a different kind of freefall." },
+  { src: profile.photos.districts, caption: "64 Districts of Bangladesh — carrying the flag across the country." },
+  { src: profile.photos.lastClass, caption: "Last class at BUET — one final walk across campus." },
+  { src: profile.photos.mountains, caption: "Lost in the mountains — Himalayan peaks that never seem to end." },
 ];
 
 export default function MiscPage() {

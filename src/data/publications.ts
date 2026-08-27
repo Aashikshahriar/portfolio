@@ -151,6 +151,16 @@ export const publications: Publication[] = [
     year: 2026,
     link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5854019",
   },
+  {
+    id: "vip-cup-2026",
+    type: "pre-print",
+    title: "EGD-YOLO: A Lightweight Multimodal Framework for Robust Drone-Bird Discrimination via Ghost-Enhanced YOLOv8n and EMA Attention under Adverse Condition",
+    authors: "Sudipto Sarkar, Mohammad Asif Hasan, Khondakar Ashik Shahriar, Fabliha Labiba, Nahian Tasnim, Shaikh Anwarul Fattah*",
+    venue: "SSRN",
+    year: 2026,
+    link: "https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5854019",
+  },
+
 ];
 
 export const journalArticles = publications.filter((p) => p.type === "journal");

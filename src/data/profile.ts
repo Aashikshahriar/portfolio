@@ -24,6 +24,9 @@ export const profile = {
     main: "photo_main.jpg",
     alaska: "photo_alaska.jpg",
     bungee: "photo_bungee.jpg",
+    districts: "64_district_bangladesh.jpg",
+    lastClass: "last_class_BUET.jpg",
+    mountains: "lost_in_mountains.jpg",
   },
   social: [
     { name: "Email", url: "mailto:kh.ashikshahriar@gmail.com", icon: "mail" },
