@@ -25,8 +25,6 @@ export const profile = {
     alaska: "photo_alaska.jpg",
     bungee: "photo_bungee.jpg",
   },
-  // NOTE: LinkedIn and Facebook URLs were not present in the source CV.
-  // Replace the "#" placeholders below with your actual profile URLs.
   social: [
     { name: "Email", url: "mailto:kh.ashikshahriar@gmail.com", icon: "mail" },
     {
@@ -46,8 +44,8 @@ export const profile = {
     },
     { name: "GitHub", url: "https://github.com/Aashikshahriar", icon: "github" },
     { name: "Kaggle", url: "https://www.kaggle.com/ashikshahriar", icon: "kaggle" },
-    { name: "LinkedIn", url: "#", icon: "linkedin" },
-    { name: "Facebook", url: "#", icon: "facebook" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/ashik-shahriar-3387b9258/", icon: "linkedin" },
+    { name: "Facebook", url: "https://www.facebook.com/ashik.ceusc/", icon: "facebook" },
   ] satisfies SocialLink[],
 
   education: [

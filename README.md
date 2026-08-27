@@ -54,9 +54,7 @@ every push to `main` via GitHub Actions.
 
 **Base path:**
 
-- If your repo is named `<your-username>.github.io` (a user/org page), the site is served from
-  the domain root — no changes needed.
-- If it's a project repo (e.g. `portfolio`), the site is served from
-  `https://<your-username>.github.io/<repo>/`. Set the `NEXT_PUBLIC_BASE_PATH` environment
-  variable to `/<repo>` in `.github/workflows/deploy.yml` (see the commented-out example in that
-  file) before pushing.
+This repo is `Aashikshahriar/portfolio` — a project repo, so the site is served at
+`https://aashikshahriar.github.io/portfolio/`, not the domain root. The workflow already sets
+`NEXT_PUBLIC_BASE_PATH=/portfolio` for the build step to account for this. If you ever rename the
+repo (or move to a `<username>.github.io` user page), update or remove that env var accordingly.

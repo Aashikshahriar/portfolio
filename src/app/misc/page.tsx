@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Container } from "@/components/Container";
 import { Section } from "@/components/Section";
 import { profile } from "@/data/profile";
+import { asset } from "@/lib/paths";
 
 export const metadata: Metadata = { title: "Misc — Khondakar Ashik Shahriar" };
 
@@ -28,7 +29,7 @@ export default function MiscPage() {
               className="overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800"
             >
               <Image
-                src={`/${item.src}`}
+                src={asset(item.src)}
                 alt={item.caption}
                 width={800}
                 height={1000}

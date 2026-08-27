@@ -27,12 +27,11 @@ jobs:
 
       - run: npm ci
 
-      # If deploying to <username>.github.io (a user/org page), leave NEXT_PUBLIC_BASE_PATH unset.
-      # If deploying to a project page (https://<username>.github.io/<repo>/), uncomment the line
-      # below and set it to "/<repo>".
-      # env:
-      #   NEXT_PUBLIC_BASE_PATH: /<repo>
+      # Repo is a project page (Aashikshahriar/portfolio), served at
+      # https://aashikshahriar.github.io/portfolio/ — so assets need this prefix.
       - run: npm run build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /portfolio
 
       - uses: actions/configure-pages@v5
 

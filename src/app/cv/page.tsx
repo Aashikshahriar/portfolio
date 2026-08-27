@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { HiOutlineDownload, HiOutlineExternalLink } from "react-icons/hi";
 import { Container } from "@/components/Container";
 import { Section } from "@/components/Section";
 import { profile } from "@/data/profile";
 import { publications } from "@/data/publications";
+import { asset } from "@/lib/paths";
 
 export const metadata: Metadata = { title: "CV — Khondakar Ashik Shahriar" };
-
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export default function CvPage() {
   return (
@@ -21,7 +21,7 @@ export default function CvPage() {
             </p>
           </div>
           <a
-            href={`${basePath}/${profile.cvFile}`}
+            href={asset(profile.cvFile)}
             className="inline-flex items-center gap-2 rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
           >
             Download PDF
@@ -69,9 +69,9 @@ export default function CvPage() {
         <p className="text-sm text-neutral-600 dark:text-neutral-400">
           {publications.length} publications ({publications.filter((p) => p.type === "journal").length} journal
           articles, {publications.filter((p) => p.type === "conference").length} conference proceedings). See the{" "}
-          <a href={`${basePath}/publications/`} className="text-accent-600 underline dark:text-accent-400">
+          <Link href="/publications" className="text-accent-600 underline dark:text-accent-400">
             full publications page
-          </a>{" "}
+          </Link>{" "}
           for details and links.
         </p>
       </Section>

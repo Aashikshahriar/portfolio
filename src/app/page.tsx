@@ -7,6 +7,7 @@ import { SocialLinks } from "@/components/SocialLinks";
 import { PublicationCard } from "@/components/PublicationCard";
 import { profile } from "@/data/profile";
 import { highlightedPublications } from "@/data/publications";
+import { asset } from "@/lib/paths";
 
 export default function Home() {
   return (
@@ -33,7 +34,7 @@ export default function Home() {
                 <HiOutlineArrowRight className="h-4 w-4" />
               </Link>
               <a
-                href={`${process.env.NEXT_PUBLIC_BASE_PATH || ""}/${profile.cvFile}`}
+                href={asset(profile.cvFile)}
                 className="inline-flex items-center gap-2 rounded-full border border-neutral-300 px-5 py-2.5 text-sm font-medium text-neutral-800 transition hover:border-neutral-400 dark:border-neutral-700 dark:text-neutral-200 dark:hover:border-neutral-500"
               >
                 Download PDF
@@ -46,7 +47,7 @@ export default function Home() {
 
           <div className="mx-auto h-40 w-40 flex-shrink-0 overflow-hidden rounded-full ring-4 ring-neutral-100 sm:h-52 sm:w-52 dark:ring-neutral-900">
             <Image
-              src={`/${profile.photos.main}`}
+              src={asset(profile.photos.main)}
               alt={profile.name}
               width={416}
               height={416}
