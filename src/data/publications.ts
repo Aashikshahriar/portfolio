@@ -93,6 +93,9 @@ export const publications: Publication[] = [
     venue: "Magnetic Resonance Imaging, Elsevier",
     year: 2026,
     link: "https://www.sciencedirect.com/science/article/pii/S0730725X26001232",
+    graphicalAbstract: "supervised-autoencoder-eeg-fmri-artifact-removal.jpg",
+    abstract:
+      "Simultaneous electroencephalography (EEG) and functional magnetic resonance imaging (fMRI) provide complementary views of brain function, but MRI-induced gradient (GA) and ballistocardiogram (BCG) artifacts can overwhelm the EEG. We propose Deep Artifact Removal (DAR), a supervised 1D convolutional autoencoder trained on paired artifact-contaminated and MR-corrected segments from the public Carbon Wire Loop EEG–fMRI dataset to suppress artifacts while preserving physiology. Across subjects, DAR achieves RMSE 0.022 ± 0.015 and Structural Similarity Index Measure (SSIM) 0.888 ± 0.091, with a mean SNR gain of 14.63 dB (paired t-test p < 0.001; Cohen's d > 1.2). Leave-one-subject-out testing confirms generalization to unseen subjects (RMSE 0.063 ± 0.011, SSIM 0.666 ± 0.088). Physiological fidelity is maintained by preserving occipital alpha activity (8–12 Hz) and retaining >75% of alpha power after denoising. Saliency analysis highlights temporal and spatial patterns that are most influential for artifact reduction. DAR outperforms PCA, ICA, average artifact subtraction, and wavelet denoising in reconstruction error, structural similarity, and SNR improvement, while better preserving neurophysiologically relevant oscillations.",
   },
   {
     id: "parkinsons-severity-longitudinal-speech",
