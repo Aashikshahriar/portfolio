@@ -95,7 +95,7 @@ export const profile = {
     "IEEE Transactions on Vehicular Technology",
     "Measurement Science and Technology (IOP Publishing)",
     "PLOS ONE",
-    "Medical Engineering & Physics (Elsevier)",
+    "Medical Engineering & Physics (IoP Publishing)",
   ],
 
   leadership: [

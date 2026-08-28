@@ -7,6 +7,9 @@ export type Publication = {
   year: number;
   link: string;
   highlight?: boolean;
+  graphicalAbstract?: string;
+  caption?: string;
+  abstract?: string;
 };
 
 const AUTHOR = "Khondakar Ashik Shahriar";
@@ -21,6 +24,11 @@ export const publications: Publication[] = [
     year: 2025,
     link: "https://ieeexplore.ieee.org/abstract/document/11045673/",
     highlight: true,
+    graphicalAbstract: "glioma-grade-classification.jpg",
+    caption:
+      "Hyperparameter-Tuned CNN for Glioma Grading with Saliency Mapping: (a) Model optimized via KerasTuner. (b) Saliency maps highlight peritumoral regions as key for classification.",
+    abstract:
+      "Glioma classification is critical for early diagnosis and treatment planning, yet manual MRI-based diagnosis is time-consuming and prone to errors. This study proposed a CNN-based approach optimized with KerasTuner for glioma classification, focusing on achieving high accuracy using a lightweight architecture. While hyperparameter tuning is well-established, its tailored application to this dataset and problem domain improves performance and reproducibility. The model employs KerasTuner to optimize key hyperparameters, including filter sizes, pooling layers, dropout rates, and optimizers, ensuring improved feature extraction and robustness. A dataset comprising 16,956 T2w Flair MRI slice images from 231 patients was used and categorized into three tumor grades (Grade 2, Grade 3, and Grade 4). The proposed model was trained using five-fold cross-validation, achieving an average multi-class classification accuracy of 89% and a binary classification accuracy of 93% in distinguishing low-grade (Grades 2) from high-grade (Grade 3 and Grade 4) tumors. Comparative analysis with state-of-the-art deep learning models such as ResNet-50, DenseNet-201, and EfficientNet-B0 demonstrated that our optimized CNN outperformed these architectures in accuracy, recall, and F1-score. Moreover, an ablation study and statistical analysis were performed. The experimental results confirm that integrating hyperparameter tuning in lightweight CNN models significantly improves tumor classification performance, reducing misclassification errors between adjacent grades. These findings emphasize the potential of deep learning in automated glioma classification, providing a more efficient and reliable tool for clinical diagnosis. Saliency map visualizations revealed that the model predominantly attends to the peritumoral regions, highlighting their significance in accurate glioma grade classification. Our hyper-tuned CNN achieved comparable performance across T1-weighted, T1-weighted-Gd, T2-weighted, and FLAIR inputs. Extensive augmentation trials, dropout/depth ablation, and paired-t analysis (t = 4.37, p < 0.0001) verified the model's superiority over other baselines. Future work will explore multimodal imaging, domain adaptation, and transfer learning to enhance model robustness across diverse medical datasets.",
   },
   {
     id: "domain-adaptive-modulation-classification",
@@ -40,6 +48,10 @@ export const publications: Publication[] = [
     venue: "Physiological Measurement, IOPscience",
     year: 2026,
     link: "https://iopscience.iop.org/article/10.1088/1361-6579/ae520c/meta",
+    graphicalAbstract: "nonlinear-models-cognitive-load-stress-exercise.png",
+    caption: "Overview of the proposed wearable physiological signal processing and modeling pipeline.",
+    abstract:
+      "Objective. Physiological measurements obtained from wearable devices reflect complex autonomic nervous system dynamics that are often assumed to follow simple linear relationships, such as elevated heart rate under stress or reduced stress during exercise. This study investigates whether physiological state recognition from wearable measurements is fundamentally linear or nonlinear by examining stress, cognitive load, and physical exercise detection. Approach. A unified signal-processing and evaluation framework was applied to three publicly available Empatica E4 datasets covering structured stress induction, real-world exam stress, aerobic and anaerobic exercise, and cognitive load tasks. Standardized preprocessing, window-based feature extraction, subject-independent evaluation, leave-one-subject-out (LOSO) validation, multimodal ablation studies, and Shapley Additive Explanations (SHAP)-based interpretability analysis were conducted. Multiple linear models (logistic regression, linear support vector machine (SVM), linear discriminant analysis, and ridge classifier) were compared against nonlinear approaches, including SVM(RBF), random forest, gradient boosting, XGBoost, and LightGBM. Main results. Across all datasets, nonlinear models consistently outperformed linear baselines. Tree-based ensembles achieved 0.89–0.98 accuracy and 0.96–0.99 AUC, whereas linear models remained below 0.70–0.73 AUC. LOSO validation revealed substantial inter-individual variability, yet nonlinear models retained moderate cross-person generalization. Ablation results confirmed the importance of multimodal fusion, particularly electrodermal activity, temperature, and accelerometry. SHAP analysis revealed nonlinear and interaction-driven feature effects consistent with known autonomic mechanisms. Significance. These findings demonstrate that physiological state recognition from wearable measurements is inherently nonlinear, even when individual modalities exhibit monotonic trends. The study establishes a unified benchmark and supports the necessity of nonlinear modeling for robust, real-time wearable health-monitoring systems.",
   },
   {
     id: "magnification-adaptation-breast-cancer-histopathology",
@@ -59,6 +71,11 @@ export const publications: Publication[] = [
     year: 2026,
     link: "https://pubs.rsc.org/en/content/articlehtml/2026/dd/d6dd00077k",
     highlight: true,
+    graphicalAbstract: "privacy-preserving-har-csi.png",
+    caption:
+      "We propose an end-to-end privacy-preserving CSI-based HAR framework integrating a CNN with temporal attention, which outperforms existing studies on multiple benchmark datasets with distance, height and environmental variations.",
+    abstract:
+      "WiFi Channel State Information (CSI) has emerged as a powerful sensing modality for device-free Human Activity Recognition (HAR), enabling fine-grained motion understanding without requiring wearable sensors or cameras. However, any type of HAR – either CSI signal-based or device-based, inherently encodes sensitive behavioral patterns, raising significant privacy concerns. In this work, we propose an end-to-end privacy-preserving CSI-based HAR framework that integrates a Convolutional Neural Network (CNN) with a temporal attention mechanism. We perform extensive evaluations on multiple benchmark datasets consisting of varying distance and height factors, as well as different environmental conditions. Our baseline non-privacy-preserving CNN–temporal attention model achieves state-of-the-art performance. Additionally, we incorporate differential privacy (DP) into the training pipeline – enabling rigorous privacy guarantees through controlled noise injection and gradient clipping. We evaluate the proposed framework's privacy–utility trade-off and demonstrate that even strong privacy protection can maintain excellent recognition accuracy. Our framework can progressively approach the non-privacy-preserving performance for some parameter regimes. As such, our experimental results clearly demonstrate that the proposed architecture remains robust under privacy constraints and generalizes effectively across heterogeneous sensing conditions. We argue that our work provides practical insights into deploying secure and privacy-aware WiFi sensing systems for real-world HAR applications.",
   },
   {
     id: "supervised-autoencoder-eeg-fmri-artifact-removal",
@@ -78,6 +95,10 @@ export const publications: Publication[] = [
     year: 2026,
     link: "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0343191",
     highlight: true,
+    graphicalAbstract: "parkinsons-severity-longitudinal-speech.png",
+    caption: "Overview of the proposed Parkinson's disease progression framework using longitudinal voice biomarkers.",
+    abstract:
+      "Parkinson's disease (PD) is a progressive neurological disorder characterized by motor impairments whose severity is commonly assessed using the Unified Parkinson's Disease Rating Scale (UPDRS). Although clinically established, UPDRS assessment is inherently subjective, requiring in-person evaluation by trained specialists, limiting its suitability for frequent monitoring. Speech production is affected early in PD and provides a non-invasive modality for remote symptom assessment. In this study, an uncertainty-aware personalized framework is proposed for estimating PD severity from speech signals. The approach integrates longitudinal temporal modeling of longitudinal speech recordings with patient-specific representations and a probabilistic latent disease state. Continuous motor UPDRS scores are jointly estimated with data-driven ordinal disease severity stages, enabling both fine-grained regression and auxiliary ordinal prediction. Predictive uncertainty is explicitly quantified to characterize predictive variability within the proposed framework. The method is evaluated on a longitudinal speech dataset using a strict patient-wise split, ensuring that all test subjects are unseen during training. On the held-out test set, the proposed model achieves promising predictive accuracy (mean absolute error 0.56 UPDRS points, root mean squared error 0.74, and coefficient of determination R2 = 0.99) for motor UPDRS estimation. Ordinal severity classification attained an accuracy of 0.92 across three stages. Comparative experiments against classical machine learning methods and global temporal baselines demonstrate consistent performance improvements. These results demonstrate the potential of personalized, uncertainty-aware speech modeling for longitudinal PD severity estimation.",
   },
   {
     id: "cross-spectral-event-detection-fiber",
