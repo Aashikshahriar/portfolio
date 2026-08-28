@@ -1,6 +1,9 @@
 export type Quote = {
   text: string;
   author: string;
+  source?: string;
+  lines?: string[];
+  lang?: "bn";
 };
 
 export const quotes: Quote[] = [
@@ -23,5 +26,17 @@ export const quotes: Quote[] = [
   {
     text: "Man is condemned to be free.",
     author: "Jean-Paul Sartre",
+  },
+  {
+    text: "কালের যাত্রার ধ্বনি শুনিতে কি পাও?",
+    lines: [
+      "কালের যাত্রার ধ্বনি শুনিতে কি পাও?",
+      "তারি রথ নিত্য উধাও।",
+      "জাগিছে অন্তরীক্ষে হৃদয়স্পন্দন",
+      "চক্রে পিষ্ট আধারের বক্ষ-ফাটা তারার ক্রন্দন।",
+    ],
+    author: "রবীন্দ্রনাথ ঠাকুর",
+    source: "শেষের কবিতা",
+    lang: "bn",
   },
 ];
