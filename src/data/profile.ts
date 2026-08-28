@@ -27,6 +27,7 @@ export const profile = {
     districts: "64_district_bangladesh.jpg",
     lastClass: "last_class_BUET.jpg",
     mountains: "lost_in_mountains.jpg",
+    streetFood: "street_food.jpg",
   },
   social: [
     { name: "Email", url: "mailto:kh.ashikshahriar@gmail.com", icon: "mail" },
