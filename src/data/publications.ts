@@ -64,6 +64,11 @@ export const publications: Publication[] = [
     venue: "International Journal of Applied and Computational Intelligence Systems (IJACIS), Springer",
     year: 2026,
     link: "https://link.springer.com/article/10.1007/s44196-026-01273-4",
+    graphicalAbstract: "magnification-adaptation-breast-cancer-histopathology.png",
+    caption:
+      "Cross-magnification domain adaptation framework for breast cancer histopathology: BreakHis images are grouped into low (40X, 100X) and high (200X, 400X) domains, followed by parallel handcrafted (Color, LBP, Wavelet, Haralick) and deep (CNN/Transformer) feature extraction, domain alignment via CORAL/MMD or DANN.",
+    abstract:
+      "Cross-magnification variability poses a critical challenge in deploying AI models for digital pathology, as classifiers trained at a single resolution often fail to generalize across heterogeneous imaging conditions. This study systematically investigates the effects of magnification domain shifts on breast histopathology classification by combining handcrafted machine-learning features, modern deep architectures, and progressive domain adaptation strategies. Although handcrafted models performed well in the domain, they degraded sharply under cross-magnification transfer, and shallow alignment methods such as CORAL and MMD yielded only marginal improvements. In contrast, deep transformer and convolutional backbones demonstrated greater robustness through hierarchical, scale-tolerant feature learning. Adversarial domain adaptation with DANN yielded the most consistent cross-magnification generalization (AUC = 0.975) and preserved malignant recall, a critical clinical requirement. Gradient reversal strength experiments revealed that moderate λ values (0.5–0.8) yield an optimal balance between domain invariance and diagnostic discrimination. Grad-CAM and t-SNE confirmed that adapted models focused on biologically meaningful patterns and maintained coherent feature geometry across magnifications. Overall, this work highlights deep adversarial adaptation as an effective and interpretable solution for magnification-agnostic, clinically transferable computational pathology.",
   },
   {
     id: "privacy-preserving-har-csi",
