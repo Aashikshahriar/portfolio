@@ -20,7 +20,7 @@ export default function MiscPage() {
     <Container>
       <Section className="pt-14" eyebrow="Beyond Research" title="Misc">
         <p className="max-w-2xl text-neutral-600 dark:text-neutral-400">
-          A few glimpses of life outside the lab — travel, adventure, and the occasional leap of faith.
+          A few glimpses of life outside my routine life — travel, adventure, and the occasional leap of faith.
         </p>
       </Section>
 

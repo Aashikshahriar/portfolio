@@ -64,7 +64,7 @@ export default async function PublicationDetailPage({ params }: { params: Promis
               alt={publication.caption ?? publication.title}
               width={1600}
               height={900}
-              className="w-full object-contain"
+              className="w-full bg-white object-contain"
             />
             {publication.caption && (
               <figcaption className="border-t border-neutral-200 p-4 text-sm text-neutral-500 dark:border-neutral-800 dark:text-neutral-400">

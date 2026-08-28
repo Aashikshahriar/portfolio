@@ -39,6 +39,9 @@ export const publications: Publication[] = [
     year: 2026,
     link: "https://ieeexplore.ieee.org/abstract/document/11417161",
     highlight: true,
+    graphicalAbstract: "domain-adaptive-modulation-classification.png",
+    abstract:
+      "Reliable automatic modulation classification (AMC) degrades under mismatched noise and propagation conditions. This letter presents a lightweight and interpretable domain-adaptive AMC framework that jointly addresses both SNR variation and channel mismatch. Modality-specific feature extractors operate on raw IQ samples and spectral representations, while a domain-alignment module combines adversarial domain confusion with covariance matching to learn domain-invariant features. Experiments on RadioML2016.10a show improved robustness under SNR mismatch, and tests on Rayleigh–Rician fading datasets across five carrier frequencies demonstrate strong cross-channel generalization, achieving up to 86.8% accuracy. The proposed models require fewer than 0.75 MB of parameters and support sub-millisecond inference, supporting deployment-ready intelligent radio systems.",
   },
   {
     id: "nonlinear-models-cognitive-load-stress-exercise",
@@ -108,6 +111,10 @@ export const publications: Publication[] = [
     venue: "IEEE Communications Letters",
     year: 2026,
     link: "https://ieeexplore.ieee.org/document/11643788",
+    graphicalAbstract: "cross-spectral-event-detection-fiber.png",
+    caption: "Proposed cross-spectral correlation sensing framework.",
+    abstract:
+      "A cross-spectral second-order modeling framework is proposed for robust event detection in distributed optical fiber channels. Rather than directly modeling raw spatio-temporal intensity measurements, the framework explicitly exploits second-order spatial interaction geometry through cross-correlation and spectral factorization. This representation captures the low-rank structure of event-induced perturbations while effectively suppressing additive noise. Experimental evaluation on a φ-OTDR dataset achieves 97.48% classification accuracy and demonstrates graceful performance degradation under decreasing SNR, validating the effectiveness of second-order channel modeling for distributed optical detection.",
   },
   {
     id: "bayesian-qsm-uncertainty-quantification",
@@ -117,6 +124,10 @@ export const publications: Publication[] = [
     venue: "Physics in Medicine & Biology",
     year: 2026,
     link: "https://iopscience.iop.org/article/10.1088/1361-6560/ae9c82",
+    graphicalAbstract: "bayesian-qsm-uncertainty-quantification.png",
+    caption: "Conceptual illustration of the proposed physics-constrained probabilistic inversion framework.",
+    abstract:
+      "Quantitative Susceptibility Mapping (QSM) requires inversion of a convolutional dipole operator whose null-space renders the reconstruction problem severely ill-posed, such that small perturbations in the measured field can induce large variations in the estimated susceptibility distribution. While recent deep learning approaches improve empirical reconstruction quality, they typically produce deterministic estimates and treat susceptibility source separation as an independent post-processing step, without modeling inversion uncertainty or enforcing structured physical consistency. In this work, we formulate QSM as a physics-constrained probabilistic inverse problem and propose a Bayesian reconstruction framework that performs susceptibility estimation and uncertainty quantification. The susceptibility distribution is modeled using a heteroscedastic Gaussian posterior parameterized by a neural network, yielding voxel-wise posterior mean and variance. A dipole-domain consistency term enforces fidelity to the physical forward model, acting as an implicit null-space regularizer that stabilizes the learned inversion operator. The estimated posterior is further incorporated into a sign-constrained variational formulation to decompose total susceptibility into paramagnetic and diamagnetic components in a post-processing step, enabling uncertainty-aware source separation. This coupling between probabilistic reconstruction and variational decomposition mitigates error accumulation inherent in sequential pipelines. Experiments on a multi-session Head and Neck QSM repeatability dataset demonstrate competitive reconstruction accuracy, meaningful uncertainty calibration, and stable susceptibility decomposition, further validated on a simulated dataset. The proposed approach establishes a physics-consistent probabilistic inversion paradigm for QSM, providing an interpretable and uncertainty-aware solution to dipole inversion.",
   },
   {
     id: "bidirectional-eeg-fmri-reconstruction",

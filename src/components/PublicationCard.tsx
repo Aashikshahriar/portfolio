@@ -36,7 +36,7 @@ export function PublicationCard({ publication }: { publication: Publication }) {
           alt=""
           width={96}
           height={96}
-          className="h-16 w-16 flex-shrink-0 rounded-lg border border-neutral-200 object-cover sm:h-20 sm:w-20 dark:border-neutral-800"
+          className="h-16 w-16 flex-shrink-0 rounded-lg border border-neutral-200 bg-white object-cover sm:h-20 sm:w-20 dark:border-neutral-800"
         />
       )}
       <div className="min-w-0 flex-1">
