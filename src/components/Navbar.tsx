@@ -14,6 +14,7 @@ const links = [
   { href: "/blog", label: "Blog" },
   { href: "/quotes", label: "Quotes" },
   { href: "/misc", label: "Misc" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Navbar() {
