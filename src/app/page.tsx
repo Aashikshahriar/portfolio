@@ -58,6 +58,22 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* Current interest callout */}
+      <div className="mb-12 rounded-xl border border-accent-200 bg-accent-50 p-5 dark:border-accent-800 dark:bg-accent-900/20">
+        <p className="text-neutral-700 dark:text-neutral-300">
+          <span className="font-semibold text-accent-700 dark:text-accent-400">Currently into:</span> the
+          theoretical side of Generative AI — diffusion models, VAEs, flow matching, and LLMs. If that's your thing
+          too,{" "}
+          <Link
+            href="/contact"
+            className="font-medium text-accent-600 underline underline-offset-2 hover:text-accent-700 dark:text-accent-400 dark:hover:text-accent-300"
+          >
+            hit me up
+          </Link>
+          .
+        </p>
+      </div>
+
       {/* Affiliations */}
       <Section eyebrow="Currently" title="Affiliations">
         <div className="space-y-4">
