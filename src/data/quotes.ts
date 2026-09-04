@@ -16,6 +16,14 @@ export const quotes: Quote[] = [
     author: "Richard Feynman",
   },
   {
+    text: "I, a universe of atoms, an atom in the universe.",
+    author: "Richard Feynman",
+  },
+  {
+    text: "I would rather have questions that can't be answered than answers that can't be questioned.",
+    author: "Richard Feynman",
+  },
+  {
     text: "The very purpose of life is to be happy.",
     author: "Dalai Lama",
   },
