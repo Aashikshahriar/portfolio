@@ -53,7 +53,7 @@ export default function ProjectsPage() {
                   className="inline-flex items-center gap-1.5 text-sm font-medium text-accent-600 hover:text-accent-700 dark:text-accent-400 dark:hover:text-accent-300"
                 >
                   <HiOutlineExternalLink className="h-4 w-4" />
-                  Visualize
+                  {p.demoLabel ?? "Visualize"}
                 </a>
               )}
             </div>

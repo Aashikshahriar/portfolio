@@ -5,9 +5,20 @@ export type Project = {
   tech: string[];
   repoUrl: string;
   demoUrl?: string;
+  demoLabel?: string;
 };
 
 export const projects: Project[] = [
+  {
+    name: "ResearchPilot",
+    tagline: "An AI research workspace — chat with your papers, not just search them.",
+    description:
+      "A full-stack research assistant for working with academic papers: upload a PDF and chat with it via retrieval-augmented generation with citations, extract and classify its figures with computer vision, compare papers structurally side-by-side, and track experiments alongside them. Runs on a pluggable LLM layer with failover across OpenAI, Gemini, Mistral, and Groq.",
+    tech: ["Next.js", "FastAPI", "PostgreSQL + pgvector", "RAG", "PyMuPDF"],
+    repoUrl: "https://github.com/Aashikshahriar/ResearchPilot",
+    demoUrl: "https://research-pilot-amber.vercel.app",
+    demoLabel: "Live Demo",
+  },
   {
     name: "SVD Visualizer",
     tagline: "Watch a matrix decomposition happen, geometrically.",
