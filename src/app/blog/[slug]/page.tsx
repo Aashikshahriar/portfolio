@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { HiOutlineArrowLeft } from "react-icons/hi";
+import { HiOutlineArrowLeft, HiOutlineExternalLink } from "react-icons/hi";
 import { Container } from "@/components/Container";
 import { blogPosts } from "@/data/blog";
+import { asset } from "@/lib/paths";
 
 export function generateStaticParams() {
   return blogPosts.map((post) => ({ slug: post.slug }));
@@ -51,6 +52,27 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             </p>
           ))}
         </div>
+
+        {post.resources && post.resources.length > 0 && (
+          <div className="mb-20 rounded-xl border border-neutral-200 p-5 dark:border-neutral-800">
+            <p className="mb-3 text-sm font-semibold text-neutral-900 dark:text-white">Resources</p>
+            <ul className="space-y-2">
+              {post.resources.map((r) => (
+                <li key={r.url}>
+                  <a
+                    href={r.isLocalAsset ? asset(r.url) : r.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-1.5 text-sm text-accent-600 hover:text-accent-700 dark:text-accent-400 dark:hover:text-accent-300"
+                  >
+                    {r.label}
+                    <HiOutlineExternalLink className="h-3.5 w-3.5 flex-shrink-0" />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
     </Container>
   );
