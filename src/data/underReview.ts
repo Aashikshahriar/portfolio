@@ -17,14 +17,14 @@ export const underReview: UnderReviewWork[] = [
     status: "1st Revision",
   },
   {
+    title: "Resolution-Aware Audio Deepfake Detection via Cross-Scale Attention and Consistency Learning",
+    status: "1st Revision",
+    relatedPublicationId: "audio-deepfake",
+  },
+  {
     title: "Physics-Informed Deep Spectral Framework on Raman Spectroscopy",
     status: "Under Review",
     relatedPublicationId: "raman-spectroscopy",
-  },
-  {
-    title: "Resolution-Aware Audio Deepfake Detection via Cross-Scale Attention and Consistency Learning",
-    status: "Under Review",
-    relatedPublicationId: "audio-deepfake",
   },
   {
     title: "Spectral Signatures of Frequency- and State-Dependent EEG–BOLD Coupling Revealed by Multiband Encoding",

@@ -3,12 +3,25 @@ export type Project = {
   tagline: string;
   description: string;
   tech: string[];
-  repoUrl: string;
+  repoUrl?: string;
   demoUrl?: string;
   demoLabel?: string;
+  org?: string;
+  highlight?: boolean;
 };
 
 export const projects: Project[] = [
+  {
+    name: "AutoFix AI",
+    tagline: "An AI co-pilot for automotive repair.",
+    description:
+      "A diagnostic platform that turns a photo, a symptom description, or a scanned part into an instant fault diagnosis, the right replacement part, and a step-by-step repair walkthrough — covering ICE, hybrid, and EV vehicles. Built for trainees and professional mechanics alike, it runs on a set of specialized AI agents (engine, electrical, parts, brakes, guides, safety), a 295+ part catalog with fitment lookup, and step-by-step repair guides, fully bilingual in English and Bengali.",
+    tech: ["AI Diagnostics", "Multi-Agent System", "Computer Vision", "Bilingual (EN/BN)"],
+    demoUrl: "https://autofix.acimisai.com/",
+    demoLabel: "Visit AutoFix AI",
+    org: "ACI PLC",
+    highlight: true,
+  },
   {
     name: "ResearchPilot",
     tagline: "An AI research workspace — chat with your papers, not just search them.",
