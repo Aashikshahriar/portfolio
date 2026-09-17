@@ -5,8 +5,9 @@ export type Publication = {
   authors: string;
   venue: string;
   year: number;
-  link: string;
+  link?: string;
   highlight?: boolean;
+  badge?: string;
   graphicalAbstract?: string;
   caption?: string;
   abstract?: string;
@@ -15,6 +16,17 @@ export type Publication = {
 const AUTHOR = "Khondakar Ashik Shahriar";
 
 export const publications: Publication[] = [
+  {
+    id: "pv-resistance-estimation",
+    type: "journal",
+    title:
+      "Interpretable Physics-Guided Region-Aware Attention Learning for Series and Shunt Resistance Estimation from Photovoltaic I-V Characteristics",
+    authors: "Khondakar Ashik Shahriar*, Md. Mahmud Akon, Mostafizur Rahman",
+    venue: "Engineering Research Express, IOP Publishing",
+    year: 2026,
+    highlight: true,
+    badge: "Just Accepted",
+  },
   {
     id: "glioma-grade-classification",
     type: "journal",

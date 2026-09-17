@@ -41,9 +41,16 @@ export function PublicationCard({ publication }: { publication: Publication }) {
       )}
       <div className="min-w-0 flex-1">
         <div className="flex items-start justify-between gap-4">
-          <h3 className="font-medium text-neutral-900 group-hover:text-accent-600 dark:text-white dark:group-hover:text-accent-400">
-            {publication.title}
-          </h3>
+          <div className="flex flex-wrap items-center gap-2">
+            <h3 className="font-medium text-neutral-900 group-hover:text-accent-600 dark:text-white dark:group-hover:text-accent-400">
+              {publication.title}
+            </h3>
+            {publication.badge && (
+              <span className="flex-shrink-0 rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-medium text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300">
+                {publication.badge}
+              </span>
+            )}
+          </div>
           <HiOutlineArrowRight className="mt-1 h-4 w-4 flex-shrink-0 text-neutral-400 transition group-hover:translate-x-0.5 group-hover:text-accent-500" />
         </div>
         <AuthorLine authors={publication.authors} />

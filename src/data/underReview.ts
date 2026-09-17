@@ -12,11 +12,6 @@ export const underReview: UnderReviewWork[] = [
     status: "1st Revision",
   },
   {
-    title:
-      "Interpretable Physics-Guided Region-Aware Attention Learning for Series and Shunt Resistance Estimation from Photovoltaic I-V Characteristics",
-    status: "1st Revision",
-  },
-  {
     title: "Resolution-Aware Audio Deepfake Detection via Cross-Scale Attention and Consistency Learning",
     status: "1st Revision",
     relatedPublicationId: "audio-deepfake",

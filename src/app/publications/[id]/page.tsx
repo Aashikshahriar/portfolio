@@ -36,9 +36,16 @@ export default async function PublicationDetailPage({ params }: { params: Promis
           Back to publications
         </Link>
 
-        <p className="mt-6 text-sm font-semibold uppercase tracking-wider text-accent-600 dark:text-accent-400">
-          {typeLabel[publication.type]}
-        </p>
+        <div className="mt-6 flex flex-wrap items-center gap-2">
+          <p className="text-sm font-semibold uppercase tracking-wider text-accent-600 dark:text-accent-400">
+            {typeLabel[publication.type]}
+          </p>
+          {publication.badge && (
+            <span className="rounded-full bg-emerald-100 px-2.5 py-0.5 text-xs font-medium text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300">
+              {publication.badge}
+            </span>
+          )}
+        </div>
         <h1 className="mt-1 font-serif text-2xl font-semibold leading-snug text-neutral-900 sm:text-3xl dark:text-white">
           {publication.title}
         </h1>
@@ -47,15 +54,21 @@ export default async function PublicationDetailPage({ params }: { params: Promis
           {publication.venue}, {publication.year}
         </p>
 
-        <a
-          href={publication.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mt-6 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
-        >
-          View at {publication.venue}
-          <HiOutlineExternalLink className="h-4 w-4" />
-        </a>
+        {publication.link ? (
+          <a
+            href={publication.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-6 inline-flex items-center gap-2 rounded-full bg-neutral-900 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-neutral-700 dark:bg-white dark:text-neutral-900 dark:hover:bg-neutral-200"
+          >
+            View at {publication.venue}
+            <HiOutlineExternalLink className="h-4 w-4" />
+          </a>
+        ) : (
+          <p className="mt-6 text-sm text-neutral-500 dark:text-neutral-400">
+            Accepted at {publication.venue} — DOI/link pending.
+          </p>
+        )}
 
         {publication.graphicalAbstract && (
           <figure className="mt-10 overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800">
