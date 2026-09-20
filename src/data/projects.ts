@@ -58,4 +58,20 @@ export const projects: Project[] = [
     repoUrl: "https://github.com/Aashikshahriar/PCA_learning",
     demoUrl: "https://pcalearning-madebyashik.streamlit.app/",
   },
+  {
+    name: "MQTT Tutorial",
+    tagline: "MQTT fundamentals, learned through a working sensor telemetry pipeline.",
+    description:
+      "A hands-on introduction to MQTT messaging built around a small but complete pipeline: a publisher simulates three sensors sending JSON telemetry, a processor validates each message, stores it in SQLite, and raises an alert when temperature crosses a threshold, and an alert monitor subscribes and displays the notifications. Runs on a Mosquitto broker via Docker Compose, with everything configurable through environment variables.",
+    tech: ["Python", "MQTT", "Mosquitto", "SQLite", "Docker Compose"],
+    repoUrl: "https://github.com/Aashikshahriar/MQTT_tutorial",
+  },
+  {
+    name: "HeartMuLa Music Generation Stack",
+    tagline: "Turn lyrics and tags into music, locally, on a consumer GPU.",
+    description:
+      "A Dockerized local testing stack around the HeartMuLa-oss-3B music generation model: a FastAPI backend handles inference and job queuing, with a minimal browser console for submitting lyrics and style tags and playing back the generated audio. Set up to run on a single consumer GPU (RTX 3060 12GB class) with CUDA 12.1 and locally cached checkpoints, no Hugging Face account required.",
+    tech: ["Python", "FastAPI", "Docker", "CUDA", "Generative AI"],
+    repoUrl: "https://github.com/Aashikshahriar/music_heart_MuLA",
+  },
 ];
