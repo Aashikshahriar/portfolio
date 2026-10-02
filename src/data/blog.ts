@@ -4,14 +4,24 @@ export type BlogResource = {
   isLocalAsset?: boolean; // true for files served from public/ (needs basePath prefixing)
 };
 
+export type BlogBlock =
+  | { type: "h2"; text: string }
+  | { type: "p"; text: string }
+  | { type: "ul"; items: string[] }
+  | { type: "image"; src: string; alt: string; caption?: string } // src relative to public/
+  | { type: "table"; headers: string[]; rows: string[][]; caption?: string };
+
 export type BlogPost = {
   slug: string;
   title: string;
   date: string; // ISO date
   excerpt: string;
   content: string[]; // paragraphs
+  blocks?: BlogBlock[]; // rich content (headings, figures, tables); rendered instead of `content` when present
   resources?: BlogResource[];
 };
+
+import { musicGenresPost } from "./posts/music-genres";
 
 // Starter placeholder post so the blog section has something to render.
 // Edit or replace the entries below with your own writing.
@@ -61,4 +71,5 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+  musicGenresPost,
 ];

@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { HiOutlineArrowLeft, HiOutlineExternalLink } from "react-icons/hi";
 import { Container } from "@/components/Container";
-import { blogPosts } from "@/data/blog";
+import { blogPosts, type BlogBlock } from "@/data/blog";
 import { asset } from "@/lib/paths";
 
 export function generateStaticParams() {
@@ -24,13 +24,77 @@ function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" });
 }
 
+function Block({ block }: { block: BlogBlock }) {
+  switch (block.type) {
+    case "h2":
+      return <h2 className="pt-4 font-serif text-2xl font-semibold text-neutral-900 dark:text-white">{block.text}</h2>;
+    case "p":
+      return <p className="leading-relaxed text-neutral-700 dark:text-neutral-300">{block.text}</p>;
+    case "ul":
+      return (
+        <ul className="list-disc space-y-1.5 pl-6 leading-relaxed text-neutral-700 dark:text-neutral-300">
+          {block.items.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+      );
+    case "image":
+      return (
+        <figure className="my-6">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={asset(block.src)}
+            alt={block.alt}
+            loading="lazy"
+            className="w-full rounded-lg border border-neutral-200 bg-white dark:border-neutral-800"
+          />
+          {block.caption && (
+            <figcaption className="mt-2 text-sm text-neutral-500 dark:text-neutral-400">{block.caption}</figcaption>
+          )}
+        </figure>
+      );
+    case "table":
+      return (
+        <figure className="my-6">
+          <div className="overflow-x-auto rounded-lg border border-neutral-200 dark:border-neutral-800">
+            <table className="w-full min-w-max text-left text-sm">
+              <thead className="bg-neutral-50 text-neutral-900 dark:bg-neutral-900 dark:text-white">
+                <tr>
+                  {block.headers.map((h) => (
+                    <th key={h} className="px-3 py-2 font-semibold">
+                      {h}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody className="text-neutral-700 dark:text-neutral-300">
+                {block.rows.map((row, i) => (
+                  <tr key={i} className="border-t border-neutral-200 dark:border-neutral-800">
+                    {row.map((cell, j) => (
+                      <td key={j} className={j === 0 ? "px-3 py-1.5 font-medium" : "px-3 py-1.5"}>
+                        {cell}
+                      </td>
+                    ))}
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          {block.caption && (
+            <figcaption className="mt-2 text-sm text-neutral-500 dark:text-neutral-400">{block.caption}</figcaption>
+          )}
+        </figure>
+      );
+  }
+}
+
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = blogPosts.find((p) => p.slug === slug);
   if (!post) notFound();
 
   return (
-    <Container className="max-w-2xl">
+    <Container className="max-w-3xl">
       <div className="pt-14">
         <Link
           href="/blog"
@@ -46,11 +110,13 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <h1 className="mt-1 font-serif text-3xl font-semibold text-neutral-900 dark:text-white">{post.title}</h1>
 
         <div className="mt-8 space-y-4 pb-20">
-          {post.content.map((paragraph, i) => (
-            <p key={i} className="leading-relaxed text-neutral-700 dark:text-neutral-300">
-              {paragraph}
-            </p>
-          ))}
+          {post.blocks
+            ? post.blocks.map((block, i) => <Block key={i} block={block} />)
+            : post.content.map((paragraph, i) => (
+                <p key={i} className="leading-relaxed text-neutral-700 dark:text-neutral-300">
+                  {paragraph}
+                </p>
+              ))}
         </div>
 
         {post.resources && post.resources.length > 0 && (
